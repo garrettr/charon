@@ -79,7 +79,7 @@ function update_header_for_platform(platform) {
 }
 
 // main
-$(document).ready(function() {
+$(function() {
   console.log("document ready"); // DEBUG
 
   var detected_platform = detect_platform();

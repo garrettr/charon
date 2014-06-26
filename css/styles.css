@@ -1,0 +1,8 @@
+div#header {
+  width:100%;
+  text-align:center;
+}
+
+iframe#guide {
+  border:none;
+}

@@ -49,12 +49,12 @@ function load_guide_for_platform(platform) {
 
 function update_header_for_platform(platform) {
   // TODO? use mustache
-  var header_html = "It looks like you're using " 
-                  + "<strong>" + platforms[platform].human_readable + "</strong>";
+  var header_html = "<p>It looks like you're using " 
+                  + "<strong>" + platforms[platform].human_readable + "</strong></p>";
   
   // Don't trail off if there's only one platform
   if (Object.keys(platforms).length > 1) {
-    header_html += ". If not, please choose the guide for ";
+    header_html += "<p>If not, please choose the guide for ";
 
     var alt_guides_count = 0;
     Object.keys(platforms).forEach(function(p, i) {
@@ -75,6 +75,7 @@ function update_header_for_platform(platform) {
     });
   }
 
+  header_html += "</p>";
   $("div#header").html(header_html);
 }
 

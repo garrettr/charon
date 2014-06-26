@@ -1,6 +1,14 @@
 div#header {
   width:100%;
   text-align:center;
+  background-color:whitesmoke;
+  padding: 1em 0 0.5em 0;
+  border-bottom:1px solid #aaa;
+}
+
+div#header p {
+  /* XXX Undo weird default styles for paragraphs */
+  margin-top:0;
 }
 
 iframe#guide {

@@ -108,4 +108,13 @@ $(function() {
       $(this).remove();
     });
   });
+
+  // Dynamically resize iframe to fill the rest of the window
+  // aka legacy of brutality
+  $(window).on('load resize', function() {
+      $window = $(window);
+      $('iframe#guide').height(function() {
+          return $window.height()-$(this).offset().top;   
+      });
+  });
 });

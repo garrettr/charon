@@ -79,6 +79,13 @@ function update_header_for_platform(platform) {
   $("div#header-content").html(header_html);
 }
 
+function update_iframe_height() {
+  $window = $(window);
+  $('iframe#guide').height(function() {
+      return $window.height()-$(this).offset().top;   
+  });
+}
+
 // main
 $(function() {
   console.log("document ready"); // DEBUG
@@ -106,15 +113,11 @@ $(function() {
   $(document).on("click", "button#header-close", function(event) {
     $("div#header").fadeOut("slow", function() {
       $(this).remove();
+      update_iframe_height();
     });
   });
 
   // Dynamically resize iframe to fill the rest of the window
   // aka legacy of brutality
-  $(window).on('load resize', function() {
-      $window = $(window);
-      $('iframe#guide').height(function() {
-          return $window.height()-$(this).offset().top;   
-      });
-  });
+  $(window).on('load resize', update_iframe_height);
 });

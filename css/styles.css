@@ -6,3 +6,12 @@ div#header {
 iframe#guide {
   border:none;
 }
+
+button#header-close {
+  /* Just show the icon */
+  background:none;
+  border:none;
+  color:grey;
+  font-size:1.5em;
+  float:right;
+}

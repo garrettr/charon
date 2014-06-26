@@ -3,12 +3,16 @@
   <head>
     <title>Charon</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/charon.js"></script>
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header">
+      <button id="header-close"><i class="fa fa-times-circle"></i></button>
+      <div id="header-content"></div>
+    </div>
     <iframe id="guide" seamless></iframe>
   </body>
 </html>

@@ -76,7 +76,7 @@ function update_header_for_platform(platform) {
   }
 
   header_html += "</p>";
-  $("div#header").html(header_html);
+  $("div#header-content").html(header_html);
 }
 
 // main

@@ -100,6 +100,7 @@ $(function() {
     return false;
   });
 
+  // Register handles for the "close header" button
   // TODO leave the header accessible, maybe with a small toggle or ribbon at
   // the top right of the page
   $(document).on("click", "button#header-close", function(event) {

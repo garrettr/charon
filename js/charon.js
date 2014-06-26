@@ -100,6 +100,11 @@ $(function() {
     return false;
   });
 
-  // TODO handler for button to hide the header (but leave it accessible, via
-  // a small toggle)
+  // TODO leave the header accessible, maybe with a small toggle or ribbon at
+  // the top right of the page
+  $(document).on("click", "button#header-close", function(event) {
+    $("div#header").fadeOut("slow", function() {
+      $(this).remove();
+    });
+  });
 });
